@@ -1,0 +1,127 @@
+ *{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+
+body {
+background: #aa4b6b;
+    background: -webkit-linear-gradient(to bottom, #3b8d99, #6b6b83, #aa4b6b);
+    background: linear-gradient(to bottom, #3b8d99, #6b6b83, #aa4b6b);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.calculator {
+position: relative;
+height: auto;
+width: auto;
+padding: 20px;
+border-radius: 15px;
+box-shadow: 0 10px 20px rgb(187, 130, 130);
+background-color: antiquewhite;
+#display{
+    color: gray;
+    font-size: 30px;
+    margin: 0 10px;
+    height: 100px;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+
+}
+#equal{
+    height: 130px;
+}
+#clear{
+    background: #E94057;
+    color: antiquewhite;
+    border-radius:30px;
+}
+.btn-number{
+    background-color: cornsilk;
+    color:#aa4b6b;
+}
+.btn-operator{
+    background-color: #eaafc8;
+    color: antiquewhite;
+}
+.btn-equal {
+    background-color:#3b8d99;
+    color:antiquewhite;
+}
+&.dark{
+    background-color: #333;
+    #display {
+            color: antiquewhite;
+        }
+    #clear{
+        background-color: #89253e;
+        color:beige;
+    }
+    .btn-number{
+        background-color: #3a6186;
+        color: beige;
+    }
+    .btn-operator{
+        background-color: #11998e;
+        color: beige;
+    }
+    .btn-equal{
+        background-color: #614385;
+        color:beige;
+    }
+    button{
+            box-shadow: 0 5px 5px rgb(120, 120, 160);
+    }  
+}
+}
+.theme-toggler{
+position:absolute;
+top: 30px;
+right: 30px;
+color: antiquewhite;
+cursor: pointer;
+z-index: 1;
+&::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: orange;
+    z-index: -1;
+}
+}
+.theme-toggler.active {
+    color: #333;
+    &::before {
+        background-color: antiquewhite;
+    }
+}
+button{
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 0 5px 5px rgb(187, 130, 130);
+    margin: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+/*tema dark*/
